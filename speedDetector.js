@@ -21,14 +21,7 @@ function speedGovern(speed) {
     if (speed > 70) {
         let speedPenalty = (speed - 70);
         if (speedPenalty >= 5) {
-            if((speedPenalty % 5 !== 0)) {
-                    demeritPoints = Math.floor(speedPenalty / 5);
-                }
-            if ((speedPenalty % 5) === 0) {
-                for (let i = 5; i <= speedPenalty; i += 5) {
-                    demeritPoints++;
-                }
-            }
+            demeritPoints = Math.floor(speedPenalty / 5);
         }
     }
     console.log(demeritPoints);
